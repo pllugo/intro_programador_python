@@ -11,8 +11,8 @@ Programa creado para poner a prueba los conocimientos
 adquiridos durante la clase
 '''
 
-__author__ = "Inove Coding School"
-__email__ = "alumnos@inove.com.ar"
+__author__ = "Pedro Lugo"
+__email__ = "pllugo@gmail.com"
 __version__ = "1.2"
 
 import math
@@ -27,6 +27,8 @@ def practica_listas():
     lista1 = []  # Lista vacia
 
     # Crear una lista de rango -5 a 5 inclusive
+    for i in range(-5,6):
+        lista1.append(i)
 
     print('1:', lista1)
 
@@ -36,7 +38,11 @@ def practica_listas():
     lista2 = []  # Lista vacia
     # Crear una lista de rango -5 a 5 inclusive de 
     # solo nùmeros impares
-
+    for i in range(len(lista1)):
+        if (lista1[i] % 2 != 0):
+            lista2.append(lista1[i])
+        else:
+            continue
     print('2:', lista2)
 
     # 3) De la lista1 filtrar los números negativos, es decir,
@@ -44,8 +50,11 @@ def practica_listas():
 
     lista3 = []  # Lista vacia
     # Filtrar numeros negativos
-
-
+    for i in range(len(lista1)):
+        if lista1[i] < 0:
+            lista3.append(lista1[i])
+        else:
+            continue
     print('3:', lista3)
 
     # 4) De la lista1 filtrar los números mayores a 2, es decir,
@@ -54,7 +63,7 @@ def practica_listas():
     lista4 = []  # Lista vacia
     # Filtrar numeros mayores a 2
     for n in lista1:
-        if n > 3:
+        if n > 2:
             lista4.append(n)
 
     print('4:', lista4)
@@ -63,7 +72,8 @@ def practica_listas():
 
     suma_total = 0
     # Sumar numeros
-
+    for i in lista1:
+        suma_total = suma_total + lista1[i]
     print('5:', suma_total)
 
     # 6) De la lista1 realizar el modelo, es decir, pasar todos
@@ -71,7 +81,12 @@ def practica_listas():
 
     lista6 = []  # Lista vacia
     # Aplicar mdulo
-
+    for i in lista1:
+        if lista1[i] < 0:
+            lista6.append(lista1[i] * -1)
+        else:
+            lista6.append(lista1[i])
+    
     print('6:', lista6)
 
     # 7) Calcular la suma entre la lista 1 y la lista 6
@@ -80,7 +95,9 @@ def practica_listas():
 
     lista7 = []  # Lista vacia
     # Sumar listas
-
+    for i in range(len(lista1)):
+        lista7.append(lista1[i] + lista6[i])
+    
     print('7:', lista1)
     print('7:', lista6)
     print('7:', lista7)
@@ -89,7 +106,8 @@ def practica_listas():
 
     lista8 = []  # Lista vacia
     # Multiplicar por dos
-
+    for i in range(len(lista1)):
+        lista8.append(lista1[i] * 2)
     print('8:', lista8)
 
 
